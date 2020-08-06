@@ -42,8 +42,8 @@
                     "only-arches": [
                         "x86_64"
                     ],
-                    "url": "https://github.com/loki-project/session-desktop/releases/download/v1.2.0/session-messenger-desktop-linux-amd64-1.2.0.deb",
-                    "sha256": "48c9b6755576197e7a87e98c243c6d0c675041fa281782d0957a8f10050269fd"
+                    "url": "https://github.com/loki-project/session-desktop/releases/download/v1.2.1/session-messenger-desktop-linux-amd64-1.2.1.deb",
+                    "sha256": "6c672d13a52eef58fbbb5d543d77e640a35b4e6d1adb007520b2fd70815aebe0"
                 },
                 {
                     "type": "script",
@@ -61,4 +61,3 @@
         }
     ]
 }
-
