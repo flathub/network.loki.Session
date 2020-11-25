@@ -12,9 +12,9 @@
   <description>
     <p>
       Session is a new breed of private messenger, built on a unique network of
-      user-operated servers spread all over the world. With no central servers, 
-      Session can’t leak or sell your data. And with Session’s private routing 
-      protocols, your messages are completely anonymous. No one ever knows who 
+      user-operated servers spread all over the world. With no central servers,
+      Session can’t leak or sell your data. And with Session’s private routing
+      protocols, your messages are completely anonymous. No one ever knows who
       you’re talking to, what you’re saying, or even your IP address.
     </p>
     <ul>
@@ -58,6 +58,9 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="1.4.2" date="2020-11-25">
+      <url>https://github.com/loki-project/session-desktop/releases/tag/v1.4.2</url>
+    </release>
     <release version="1.4.1" date="2020-11-10">
       <url>https://github.com/loki-project/session-desktop/releases/tag/v1.4.1</url>
     </release>
