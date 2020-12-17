@@ -42,8 +42,8 @@
                     "only-arches": [
                         "x86_64"
                     ],
-                    "url": "https://github.com/loki-project/session-desktop/releases/download/v1.4.3/session-desktop-linux-amd64-1.4.3.deb",
-                    "sha256": "0a5cac3ca40863441b7dd6d8d62818fe81c6df97ff0eb3f16ed047833242acc0"
+                    "url": "https://github.com/loki-project/session-desktop/releases/download/v1.4.4/session-desktop-linux-amd64-1.4.4.deb",
+                    "sha256": "2fbb06fbb7bc38281c6f83152637b4627b64321fb25f2bba6ab500117a4eda7b"
                 },
                 {
                     "type": "script",
