@@ -7,8 +7,8 @@
     "sdk": "org.freedesktop.Sdk",
     "command": "session",
     "separate-locales": false,
-    "rename-desktop-file": "session-messenger-desktop.desktop",
-    "rename-icon": "session-messenger-desktop",
+    "rename-desktop-file": "session-desktop.desktop",
+    "rename-icon": "session-desktop",
     "finish-args": [
         "--share=ipc",
         "--socket=x11",
@@ -22,17 +22,17 @@
     ],
     "modules": [
         {
-            "name": "session-messenger-desktop",
+            "name": "session-desktop",
             "buildsystem": "simple",
             "build-commands": [
-                "ar x session-messenger-desktop-linux-amd64-*.deb",
-                "rm -f session-messenger-desktop-linux-amd64-*.deb",
+                "ar x session-desktop-linux-amd64-*.deb",
+                "rm -f session-desktop-linux-amd64-*.deb",
                 "tar xf data.tar.xz",
                 "rm -f control.tar.gz data.tar.xz debian-binary",
                 "cp -r usr/* opt/* /app",
                 "rm -rf /app/share/icons/hicolor/1024x1024/",
                 "chmod -R a-s,go+rX,go-w /app/Session",
-                "sed -i 's|Exec=.*|Exec=session %U|' /app/share/applications/session-messenger-desktop.desktop",
+                "sed -i 's|Exec=.*|Exec=session %U|' /app/share/applications/session-desktop.desktop",
                 "install session.sh /app/bin/session",
                 "install -Dm644 network.loki.Session.metainfo.xml /app/share/metainfo/network.loki.Session.metainfo.xml"
             ],
@@ -42,15 +42,15 @@
                     "only-arches": [
                         "x86_64"
                     ],
-                    "url": "https://github.com/loki-project/session-desktop/releases/download/v1.4.2/session-messenger-desktop-linux-amd64-1.4.2.deb",
-                    "sha256": "04a919de6c770ff2d1092d6176530f0705fe1c3382a94cb421cd1c47f17ea8bc"
+                    "url": "https://github.com/loki-project/session-desktop/releases/download/v1.4.3/session-desktop-linux-amd64-1.4.3.deb",
+                    "sha256": "0a5cac3ca40863441b7dd6d8d62818fe81c6df97ff0eb3f16ed047833242acc0"
                 },
                 {
                     "type": "script",
                     "dest-filename": "session.sh",
                     "commands": [
                         "export TMPDIR=\"$XDG_RUNTIME_DIR/app/$FLATPAK_ID\"",
-                        "exec zypak-wrapper /app/Session/session-messenger-desktop \"$@\""
+                        "exec zypak-wrapper /app/Session/session-desktop \"$@\""
                     ]
                 },
                 {
