@@ -42,7 +42,7 @@
                     "only-arches": [
                         "x86_64"
                     ],
-                    "url": "https://github.com/loki-project/session-desktop/releases/download/v1.4.4/session-desktop-linux-amd64-1.4.4.deb",
+                    "url": "https://github.com/oxen-io/session-desktop/releases/download/v1.4.4/session-desktop-linux-amd64-1.4.4.deb",
                     "sha256": "2fbb06fbb7bc38281c6f83152637b4627b64321fb25f2bba6ab500117a4eda7b"
                 },
                 {
