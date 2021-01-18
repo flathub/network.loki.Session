@@ -47,7 +47,7 @@
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 141424,
-                        "url-template": "https://github.com/loki-project/session-desktop/releases/download/v$version/session-desktop-linux-amd64-$version.deb"
+                        "url-template": "https://github.com/oxen-io/session-desktop/releases/download/v$version/session-desktop-linux-amd64-$version.deb"
                     }
                 },
                 {
