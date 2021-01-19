@@ -45,9 +45,10 @@
                     "url": "https://github.com/oxen-io/session-desktop/releases/download/v1.4.4/session-desktop-linux-amd64-1.4.4.deb",
                     "sha256": "2fbb06fbb7bc38281c6f83152637b4627b64321fb25f2bba6ab500117a4eda7b",
                     "x-checker-data": {
-                        "type": "anitya",
-                        "project-id": 141424,
-                        "url-template": "https://github.com/oxen-io/session-desktop/releases/download/v$version/session-desktop-linux-amd64-$version.deb"
+                        "type": "json",
+                        "url": "https://api.github.com/repos/oxen-io/session-desktop/releases/latest",
+                        "version-query": ".tag_name | sub(\"^v\"; \"\")",
+                        "url-query": ".assets[] | select(.name==\"session-desktop-linux-amd64-\" + $version + \".deb\") | .browser_download_url"
                     }
                 },
                 {
