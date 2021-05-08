@@ -56,7 +56,7 @@
                     "dest-filename": "session.sh",
                     "commands": [
                         "export TMPDIR=\"$XDG_RUNTIME_DIR/app/$FLATPAK_ID\"",
-                        "exec zypak-wrapper /app/Session/session-desktop \"$@\""
+                        "exec zypak-wrapper /app/Session/session-desktop-bin \"$@\""
                     ]
                 },
                 {
