@@ -42,8 +42,8 @@
                     "only-arches": [
                         "x86_64"
                     ],
-                    "url": "https://github.com/oxen-io/session-desktop/releases/download/v1.6.2/session-desktop-linux-amd64-1.6.2.deb",
-                    "sha256": "70616aa2c3915b84d2502e88607b4e6ba9e35151e5b55e59ec9742445614fa2f",
+                    "url": "https://github.com/oxen-io/session-desktop/releases/download/v1.6.3/session-desktop-linux-amd64-1.6.3.deb",
+                    "sha256": "f592eac5db4e1c71410fd7ff669dcb8c4e210e3cacc866b674226323c0b856da",
                     "x-checker-data": {
                         "type": "json",
                         "url": "https://api.github.com/repos/oxen-io/session-desktop/releases/latest",
