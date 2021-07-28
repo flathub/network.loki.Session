@@ -1,69 +1,81 @@
 {
-    "app-id": "network.loki.Session",
-    "base": "org.electronjs.Electron2.BaseApp",
-    "base-version": "20.08",
-    "runtime": "org.freedesktop.Platform",
-    "runtime-version": "20.08",
-    "sdk": "org.freedesktop.Sdk",
-    "command": "session",
-    "separate-locales": false,
-    "rename-desktop-file": "session-desktop.desktop",
-    "rename-icon": "session-desktop",
-    "finish-args": [
-        "--share=ipc",
-        "--socket=x11",
-        "--socket=pulseaudio",
-        "--share=network",
-        "--device=dri",
-        "--filesystem=home",
-        "--talk-name=org.freedesktop.Notifications",
-        "--talk-name=org.kde.StatusNotifierWatcher",
-        "--own-name=org.kde.*"
-    ],
-    "modules": [
+  "app-id": "network.loki.Session",
+  "base": "org.electronjs.Electron2.BaseApp",
+  "base-version": "20.08",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "20.08",
+  "sdk": "org.freedesktop.Sdk",
+  "command": "session",
+  "separate-locales": false,
+  "rename-desktop-file": "session-desktop.desktop",
+  "rename-icon": "session-desktop",
+  "finish-args": [
+    "--share=ipc",
+    "--socket=x11",
+    "--socket=pulseaudio",
+    "--share=network",
+    "--device=dri",
+    "--filesystem=home",
+    "--talk-name=org.freedesktop.Notifications",
+    "--talk-name=org.kde.StatusNotifierWatcher",
+    "--own-name=org.kde.*"
+  ],
+  "modules": [
+    {
+      "name": "session-desktop",
+      "buildsystem": "simple",
+      "build-commands": [
+        "ar x session-desktop-linux-amd64-*.deb",
+        "rm -f session-desktop-linux-amd64-*.deb",
+        "tar xf data.tar.xz",
+        "rm -f control.tar.gz data.tar.xz debian-binary",
+        "cp -r usr/* opt/* $FLATPAK_DEST",
+        "rm -rf $FLATPAK_DEST/share/icons/hicolor/0x0/",
+        "rm -rf usr opt",
+        "install -Dm644 session_icon.svg $FLATPAK_DEST/share/icons/hicolor/scalable/apps/session-desktop.svg",
+        "for size in 64 128 256 512; do rsvg-convert -u -w $size -h $size -f png -o $size.png $FLATPAK_DEST/share/icons/hicolor/scalable/apps/session-desktop.svg; install -Dm644 $size.png $FLATPAK_DEST/share/icons/hicolor/${size}x${size}/apps/session-desktop.png; done",
+        "chmod -R a-s,go+rX,go-w $FLATPAK_DEST/Session",
+        "install session.sh $FLATPAK_DEST/bin/session",
+        "install -Dm644 network.loki.Session.metainfo.xml $FLATPAK_DEST/share/metainfo/network.loki.Session.metainfo.xml",
+        "desktop-file-edit --set-key=Exec --set-value='session %U' $FLATPAK_DEST/share/applications/session-desktop.desktop"
+      ],
+      "sources": [
         {
-            "name": "session-desktop",
-            "buildsystem": "simple",
-            "build-commands": [
-                "ar x session-desktop-linux-amd64-*.deb",
-                "rm -f session-desktop-linux-amd64-*.deb",
-                "tar xf data.tar.xz",
-                "rm -f control.tar.gz data.tar.xz debian-binary",
-                "cp -r usr/* opt/* /app",
-                "rm -rf /app/share/icons/hicolor/1024x1024/",
-                "chmod -R a-s,go+rX,go-w /app/Session",
-                "sed -i 's|Exec=.*|Exec=session %U|' /app/share/applications/session-desktop.desktop",
-                "install session.sh /app/bin/session",
-                "install -Dm644 network.loki.Session.metainfo.xml /app/share/metainfo/network.loki.Session.metainfo.xml"
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "only-arches": [
-                        "x86_64"
-                    ],
-                    "url": "https://github.com/oxen-io/session-desktop/releases/download/v1.6.7/session-desktop-linux-amd64-1.6.7.deb",
-                    "sha256": "6f0d89fc983446709d8b0551fbf0e6a304f8175dee56006309d5fdc0e5318f59",
-                    "x-checker-data": {
-                        "type": "json",
-                        "url": "https://api.github.com/repos/oxen-io/session-desktop/releases/latest",
-                        "version-query": ".tag_name | sub(\"^v\"; \"\")",
-                        "url-query": ".assets[] | select(.name==\"session-desktop-linux-amd64-\" + $version + \".deb\") | .browser_download_url"
-                    }
-                },
-                {
-                    "type": "script",
-                    "dest-filename": "session.sh",
-                    "commands": [
-                        "export TMPDIR=\"$XDG_RUNTIME_DIR/app/$FLATPAK_ID\"",
-                        "exec zypak-wrapper /app/Session/session-desktop-bin \"$@\""
-                    ]
-                },
-                {
-                    "type": "file",
-                    "path": "network.loki.Session.metainfo.xml"
-                }
-            ]
+          "type": "file",
+          "only-arches": ["x86_64"],
+          "url": "https://github.com/oxen-io/session-desktop/releases/download/v1.6.7/session-desktop-linux-amd64-1.6.7.deb",
+          "sha256": "6f0d89fc983446709d8b0551fbf0e6a304f8175dee56006309d5fdc0e5318f59",
+          "x-checker-data": {
+            "type": "json",
+            "url": "https://api.github.com/repos/oxen-io/session-desktop/releases/latest",
+            "version-query": ".tag_name | sub(\"^v\"; \"\")",
+            "url-query": ".assets[] | select(.name==\"session-desktop-linux-amd64-\" + $version + \".deb\") | .browser_download_url"
+          }
+        },
+        {
+          "type": "script",
+          "dest-filename": "session.sh",
+          "commands": [
+            "export TMPDIR=\"$XDG_RUNTIME_DIR/app/$FLATPAK_ID\"",
+            "exec zypak-wrapper /app/Session/session-desktop-bin \"$@\""
+          ]
+        },
+        {
+          "type": "file",
+          "path": "network.loki.Session.metainfo.xml"
+        },
+        {
+          "sha256": "294707383453f21ac884cd2b236a5044ee7b90b5a9ab86a0de47fe791f8bc76a",
+          "type": "file",
+          "url": "https://raw.githubusercontent.com/oxen-io/session-desktop/99f7f17e73373d8fcdfcea14673570cd0febd4a9/images/session/session_icon.svg",
+          "x-checker-data": {
+            "type": "json",
+            "url": "https://api.github.com/repos/oxen-io/session-desktop/commits?path=images%2Fsession&page=1&per_page=1",
+            "version-query": ".[0].sha",
+            "url-query": "\"https://raw.githubusercontent.com/oxen-io/session-desktop/\" + $version + \"/images/session/session_icon.svg\""
+          }
         }
-    ]
+      ]
+    }
+  ]
 }
