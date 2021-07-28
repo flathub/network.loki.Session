@@ -43,8 +43,8 @@
         {
           "type": "file",
           "only-arches": ["x86_64"],
-          "url": "https://github.com/oxen-io/session-desktop/releases/download/v1.6.7/session-desktop-linux-amd64-1.6.7.deb",
-          "sha256": "6f0d89fc983446709d8b0551fbf0e6a304f8175dee56006309d5fdc0e5318f59",
+          "url": "https://github.com/oxen-io/session-desktop/releases/download/v1.6.9/session-desktop-linux-amd64-1.6.9.deb",
+          "sha256": "a545d99dbf82a11b0153d6018a784bc50699c8b28c323ecfb046ca50d6f14838",
           "x-checker-data": {
             "type": "json",
             "url": "https://api.github.com/repos/oxen-io/session-desktop/releases/latest",
