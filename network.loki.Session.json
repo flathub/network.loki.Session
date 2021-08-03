@@ -67,13 +67,7 @@
         {
           "sha256": "294707383453f21ac884cd2b236a5044ee7b90b5a9ab86a0de47fe791f8bc76a",
           "type": "file",
-          "url": "https://raw.githubusercontent.com/oxen-io/session-desktop/99f7f17e73373d8fcdfcea14673570cd0febd4a9/images/session/session_icon.svg",
-          "x-checker-data": {
-            "type": "json",
-            "url": "https://api.github.com/repos/oxen-io/session-desktop/commits?path=images%2Fsession&page=1&per_page=1",
-            "version-query": ".[0].sha",
-            "url-query": "\"https://raw.githubusercontent.com/oxen-io/session-desktop/\" + $version + \"/images/session/session_icon.svg\""
-          }
+          "url": "https://raw.githubusercontent.com/oxen-io/session-desktop/99f7f17e73373d8fcdfcea14673570cd0febd4a9/images/session/session_icon.svg"
         }
       ]
     }
