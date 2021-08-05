@@ -30,7 +30,7 @@
                 "tar xf data.tar.xz",
                 "rm -f control.tar.gz data.tar.xz debian-binary",
                 "cp -r usr/* opt/* $FLATPAK_DEST",
-                "rm -rf $FLATPAK_DEST/share/icons/hicolor/0x0/",
+                "rm -rf $FLATPAK_DEST/share/icons/hicolor/",
                 "rm -rf usr opt",
                 "install -Dm644 session_icon.svg $FLATPAK_DEST/share/icons/hicolor/scalable/apps/session-desktop.svg",
                 "for size in 64 128 256 512; do rsvg-convert -u -w $size -h $size -f png -o $size.png $FLATPAK_DEST/share/icons/hicolor/scalable/apps/session-desktop.svg; install -Dm644 $size.png $FLATPAK_DEST/share/icons/hicolor/${size}x${size}/apps/session-desktop.png; done",
