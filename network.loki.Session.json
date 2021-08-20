@@ -51,7 +51,8 @@
                         "type": "json",
                         "url": "https://api.github.com/repos/oxen-io/session-desktop/releases/latest",
                         "version-query": ".tag_name | sub(\"^v\"; \"\")",
-                        "url-query": ".assets[] | select(.name==\"session-desktop-linux-amd64-\" + $version + \".deb\") | .browser_download_url"
+                        "url-query": ".assets[] | select(.name==\"session-desktop-linux-amd64-\" + $version + \".deb\") | .browser_download_url",
+                        "is-main-source": "true"
                     }
                 },
                 {
