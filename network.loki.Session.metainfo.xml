@@ -58,6 +58,7 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="1.7.5" date="2021-12-17"/>
     <release version="1.7.4" date="2021-10-27"/>
     <release version="1.7.3" date="2021-09-22"/>
     <release version="1.7.2" date="2021-09-20"/>
