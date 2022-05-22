@@ -15,7 +15,6 @@
         "--socket=pulseaudio",
         "--share=network",
         "--device=all",
-        "--filesystem=home",
         "--talk-name=org.freedesktop.Notifications",
         "--talk-name=org.kde.StatusNotifierWatcher",
         "--own-name=org.kde.*"
