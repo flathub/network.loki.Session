@@ -6,7 +6,7 @@ This is the Flatpak version of [session-desktop](https://github.com/oxen-io/sess
 
 If you believe the problem you are experiencing is caused due to the app being a Flatpak or if you only experience it in the Flatpak version and **not** any of the others, please [open an issue here](https://github.com/flathub/network.loki.Session/issues/new).
 
-In any other case, please [report it to upsteam](https://github.com/oxen-io/session-desktop/issues/new/choose) after checking that it [hasn't been reported already](https://github.com/oxen-io/session-desktop/issues).
+In any other case, please [report it to upstream](https://github.com/oxen-io/session-desktop/issues/new/choose) after checking that it [hasn't been reported already](https://github.com/oxen-io/session-desktop/issues).
 
 ## Wayland
 
