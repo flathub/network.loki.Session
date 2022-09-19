@@ -58,6 +58,7 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="1.10.1" date="2022-09-15"/>
     <release version="1.10.0" date="2022-09-05"/>
     <release version="1.9.1" date="2022-08-12"/>
     <release version="1.9.0" date="2022-08-10"/>
