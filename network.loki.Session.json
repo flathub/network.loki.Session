@@ -11,14 +11,15 @@
     "rename-icon": "session-desktop",
     "finish-args": [
         "--share=ipc",
+        "--socket=wayland",
         "--socket=x11",
         "--socket=pulseaudio",
         "--share=network",
         "--device=all",
-        "--filesystem=home",
         "--talk-name=org.freedesktop.Notifications",
         "--talk-name=org.kde.StatusNotifierWatcher",
-        "--own-name=org.kde.*"
+        "--own-name=org.kde.*",
+        "--own-name=org.mpris.MediaPlayer2.chromium.*"
     ],
     "modules": [
         {
