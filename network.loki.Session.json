@@ -48,7 +48,7 @@
                     "sha256": "a7a6a9ec9f81b92888747b3abe2628000ec90910208dc50e481fde7875752dab",
                     "x-checker-data": {
                         "type": "json",
-                        "url": "https://api.github.com/repos/oxen-io/session-desktop/releases/latest",
+                        "url": "https://api.github.com/repos/session-foundation/session-desktop/releases/latest",
                         "version-query": ".tag_name | sub(\"^v\"; \"\")",
                         "url-query": ".assets[] | select(.name==\"session-desktop-linux-amd64-\" + $version + \".deb\") | .browser_download_url",
                         "is-main-source": true
