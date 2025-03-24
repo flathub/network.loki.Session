@@ -4,11 +4,11 @@
   <launchable type="desktop-id">network.loki.Session.desktop</launchable>
   <name>Session Desktop</name>
   <project_license>GPL-3.0</project_license>
-  <developer_name>Oxen Project</developer_name>
+  <developer_name>Session Technology Foundation</developer_name>
   <summary>Private messenger</summary>
   <metadata_license>CC0-1.0</metadata_license>
   <url type="homepage">https://getsession.org/</url>
-  <url type="bugtracker">https://github.com/oxen-io/session-desktop/issues</url>
+  <url type="bugtracker">https://github.com/session-foundation/session-desktop/issues</url>
   <description>
     <p>
       Session is a new breed of private messenger, built on a unique network of
@@ -19,7 +19,7 @@
     </p>
     <ul>
       <li>
-        Fully anonymous account creation: No phone number or email needed to create a Session ID
+        Fully anonymous account creation: No phone number or email needed to create a Account ID
       </li>
       <li>
         Decentralised server network: No data breaches, no central point of failure
@@ -32,14 +32,14 @@
         to or the servers holding your data
       </li>
       <li>
-        Closed groups: Private, end-to-end encrypted group chats for up to 10 people
+        Groups: Private, end-to-end encrypted group chats for up to 100 people
       </li>
       <li>
         Secure attachments: Share voice snippets, photos, and files with Session's secure encryption
         and privacy protections
       </li>
       <li>
-        Multi-device syncing: One Session ID for your phone and computer
+        Multi-device syncing: One Account ID for your phone and computer
       </li>
       <li>
         Free and open-source: Don’t take our word for it — check Session's code yourself
@@ -47,9 +47,8 @@
     </ul>
     <p>
       Session is free as in free speech, free as in free beer, and free of ads and
-      trackers. Session is built and maintained by the Loki Foundation, Australia’s
-      first privacy tech not-for-profit organization. Take back your online privacy
-      today — download Session.
+      trackers. Session is built and maintained by the Swiss based Session Technology Foundation.
+      Take back your online privacy today — download Session.
     </p>
   </description>
   <screenshots>
