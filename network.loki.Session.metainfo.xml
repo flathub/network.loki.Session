@@ -57,8 +57,11 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release version="1.16.5" date="2025-07-22">
+    <release version="1.16.6" date="2025-08-13">
       <description></description>
+    </release>
+    <release version="1.16.5" date="2025-07-22">
+      <description/>
     </release>
     <release version="1.16.4" date="2025-07-17">
       <description/>
