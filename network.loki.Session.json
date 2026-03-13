@@ -45,8 +45,8 @@
                     "only-arches": [
                         "x86_64"
                     ],
-                    "url": "https://github.com/session-foundation/session-desktop/releases/download/v1.17.12/session-desktop-linux-amd64-1.17.12.deb",
-                    "sha256": "64d2a82f90799e3f35ecde096e2efe5c0624147d72947f3c9825f513136d0902",
+                    "url": "https://github.com/session-foundation/session-desktop/releases/download/v1.17.13/session-desktop-linux-amd64-1.17.13.deb",
+                    "sha256": "1cba467904b0e1052759207f7a4f685e465221329738f5e857b65fc968f61ea1",
                     "x-checker-data": {
                         "type": "json",
                         "url": "https://api.github.com/repos/session-foundation/session-desktop/releases/latest",
