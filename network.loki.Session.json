@@ -45,8 +45,8 @@
                     "only-arches": [
                         "x86_64"
                     ],
-                    "url": "https://github.com/session-foundation/session-desktop/releases/download/v1.18.4/session-desktop-linux-amd64-1.18.4.deb",
-                    "sha256": "c9856d7fb7d56fafb79a285e9aa7da1e1c69e167395aaaf21562d5898aa6f39e",
+                    "url": "https://github.com/session-foundation/session-desktop/releases/download/v1.18.5/session-desktop-linux-amd64-1.18.5.deb",
+                    "sha256": "ff2aec788ba0b02dfcb630448d7b15fcf98e6f224bc23765bc83a2c819fd13d3",
                     "x-checker-data": {
                         "type": "json",
                         "url": "https://api.github.com/repos/session-foundation/session-desktop/releases/latest",
